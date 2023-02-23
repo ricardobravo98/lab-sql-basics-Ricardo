@@ -40,7 +40,8 @@ select order_id from bank.order where account_id = 34;
  select trans_id, date, type, amount from trans where account_id = 793 order by date desc limit 10;
  
  #13
-
+select district_id, count(client_id) as n_clients from client 
+where district_id < 10 group by district_id order by district_id asc;
 
 
  #14
